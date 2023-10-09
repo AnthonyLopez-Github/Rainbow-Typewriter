@@ -26,14 +26,14 @@ int main(int argc, char **argv) {
   
   for(;;) 
   {
-    usleep(80000);
+    usleep(10000);
     
     c = fgetc(fp);
     if(c == EOF) break;
 
     if(c == ' ')
     {
-      color = ((rand() % ((40 - 30))) + 30);
+      color = ((rand() % 10) + 30);
     }
 
     fprintf(stderr, "\x1b[%dm%c", color, c);
