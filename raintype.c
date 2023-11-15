@@ -36,7 +36,9 @@ int main(int argc, char **argv) {
       color = ((rand() % 10) + 30);
     }
 
-    fprintf(stderr, "\x1b[%dm%c", color, c);
+    //fprintf(stderr, "\x1b[%dm%c", color, c);
+    printf("\x1b[%dm%c", color, c);
+    fflush(stdout);
   }
 
   fclose(fp);
